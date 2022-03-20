@@ -1,6 +1,7 @@
 const express = require('express');
-// const { userInfo } = require('os');
 const db = require('./config/connection');
+const routes = require('./controllers/api');
+
 // // Require model -- TODO: update Model Name
 // const { User } = require('./models');
 
@@ -12,9 +13,9 @@ app.use(express.json());
 
 
 
-// ============++++ ROUTES ++++================ 
-
-
-
-
-// module.exports = app;
+db.once('open', () => {
+    app.listen(PORT, () => {
+      console.log(`API running on port ${PORT}!`);
+    });
+  });
+  
