@@ -85,7 +85,7 @@ const thoughtSchema = new mongoose.Schema({
         
 
         
-       // TODO: Create a model named `Library`
+        //Create Thought Model
        const Thought = mongoose.model('Thought', thoughtSchema);
 
 
@@ -108,5 +108,5 @@ const thoughtSchema = new mongoose.Schema({
 //         }
 //        );
         
-       module.exports = Library;
+       module.exports = Thought;
        
