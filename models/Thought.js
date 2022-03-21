@@ -1,56 +1,19 @@
-const mongoose = require('mongoose');
+const { Schema, Types, model } = require('mongoose');
 
-// * `thoughtText`
-        // * String
-        // * Required
-        // * Must be between 1 and 280 characters
-
-// * `createdAt`
-        // * Date
-        // * Set default value to the current timestamp
-        // * Use a getter method to format the timestamp on query
-
-// * `username` (The user that created this thought)
-        // * String
-        // * Required
-
-// * `reactions` (These are like replies)
-        // * Array of nested documents created with the `reactionSchema`
-
-// **Schema Settings**:
-// Create a virtual called `reactionCount` that retrieves the length of the thought's `reactions` array field on query.
-
-// SUB DOCUMENT -- Reaction
-// (SCHEMA ONLY)
-
-// * `reactionId`
-        //   * Use Mongoose's ObjectId data type
-        //   * Default value is set to a new ObjectId
-
-// * `reactionBody`
-        //   * String
-        //   * Required
-        //   * 280 character maximum
-
-// * `username`
-        //   * String
-        //   * Required
-
-// * `createdAt`
-        //   * Date
-        //   * Set default value to the current timestamp
-        //   * Use a getter method to format the timestamp on query
-
-// **Schema Settings**:
-// This will not be a model, but rather will be used as the `reaction` field's subdocument schema in the `Thought` model.
-
-
-const reactionSchema = new mongoose.Schema({
+// Reaction Schema for the Reaction Model
+const reactionSchema = new Schema({
         // reactionId: set to objectId
+        reactionId: {
+                type: Schema.Types.ObjectId,
+                default: () => new Types.objectId(),
+
+        },
+
         reactionBody: {
                 type: String,
                 required: true,
-                // max character is 280
+                maxlength: [280, "Keep it simple! Max reaction is 280 characters"],
+
         },
         username:  { 
                 type: String, 
@@ -58,55 +21,60 @@ const reactionSchema = new mongoose.Schema({
         },
         createdAt: { 
                 type: Date, 
-                default: Date.now 
+                default: Date.now,
+                get: function () {
+                        return this.toLocaleString();
+                },
         },
 
-});
+},     
+{
+        id: false,
+}
+);
 
 
 
-// TODO: Define a new schema named `thoughtSchema` for the subdocument
-const thoughtSchema = new mongoose.Schema({
+// Thought Schema for the subdocument
+const thoughtSchema = new Schema({
         thoughtText: { 
                 type: String, 
-                required: true 
-                // between 1 and 280 characters
+                required: true ,
+                minlength: [1, "No thoughts entered - get your thoughts added! "],
+                maxlength: [280, "Keep it simple! Max thought is 280 characters"],
         },
         createdAt: { 
                 type: Date, 
-                default: Date.now 
+                default: Date.now,
+                get: function () {
+                        return this.toLocaleString();
+                },
         },
         username:  { 
                 type: String, 
                 required: true 
         },
         reactions: [ reactionSchema ],
-       });
+       },
+       {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
+      }       
+       );
         
 
+       thoughtSchema.virtual('reactionCount').get(function () {
+        return this.reactions.length;
+      });
         
         //Create Thought Model
-       const Thought = mongoose.model('Thought', thoughtSchema);
+       const Thought = model('Thought', thoughtSchema);
 
 
        const handleError = (err) => console.error(err);
         
-//        // TODO: Create a new instance of the model including the subdocuments
-//        const bookData = [
-//         { title: 'Dune', price: 27},
-//         { title: 'Memoirs of a Geisha', price: 17}
-//        ]
-        
-//        Library.create(
-//         { name: 'The Book Club', books: bookData },
-        
-//         (err, data) => {
-//           if (err) {
-//             console.error(err);
-//           }
-//           console.log(data);
-//         }
-//        );
         
        module.exports = Thought;
        

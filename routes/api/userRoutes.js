@@ -8,7 +8,7 @@ const {
     deleteUser,
     addFollower,
     unFollow
-} = require('../../controllers/userController.js');
+} = require('../../controllers/userController');
 
 
 //========== **`user routes`** ==========
@@ -20,10 +20,10 @@ router.route('/').get(getUsers).post(createUser);
 router.route('/:userId').get(getUserById).put(updateUser).delete(deleteUser);
 
 //------> /api/users/:userId/followers
-route('/:userId/followers').post(addFollower);
+router.route('/:userId/followers').post(addFollower);
 
 //------> /api/users/:userId/followers/:followerId
-route('/:userId/followers/:followerId').delete(unFollow);
+router.route('/:userId/followers/:followerId').delete(unFollow);
 
 
 module.exports = router;
