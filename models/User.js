@@ -23,7 +23,6 @@ const userSchema = new Schema({
 
                 },
          ],
-        // TODO: how to reference array of _id values in user model
         followers: [
                 {
                         type: Schema.Types.ObjectId,

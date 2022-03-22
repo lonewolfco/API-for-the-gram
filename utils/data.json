@@ -11,6 +11,10 @@
         {
             "username": "loselby",
             "email": "loselby@woof.com"
+        },
+        {
+            "username": "meowster",
+            "email": "meow@woof.com"
         }
 
     ],
@@ -28,6 +32,10 @@
         {
             "thoughtText": "Bark Bark",
             "username": "Bandito"
+        },
+        {
+            "thoughtText": "Meow",
+            "username": "meowster"
         },
         {
             "thoughtText": "Beach Day?",
