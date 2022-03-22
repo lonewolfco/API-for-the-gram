@@ -55,7 +55,10 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ## [Mock-up](#mockup)
 
 The following video shows examples of the application's API routes being tested in Insomnia.
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f5d1f50b212484fb39f76ecbbc45031" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<a href="https://www.loom.com/share/2f5d1f50b212484fb39f76ecbbc45031">
+    <p>Insomnia - API-for-the-gram</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/2f5d1f50b212484fb39f76ecbbc45031-with-play.gif">
+  </a>
 
 ## [How to Use](#howtouse)
 
