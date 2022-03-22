@@ -20,7 +20,7 @@ module.exports = {
           .populate('thoughts')
           .then((user) =>
             !user
-              ? res.status(404).json({ message: 'Oops -- No user with that ID' })
+              ? res.status(404).json({ message: 'Oops -- No user with that ID 💀' })
               : res.json(user)
           )
           .catch((err) => {
@@ -45,12 +45,12 @@ module.exports = {
           .then((user) =>
             !user
               ? res.status(404).json({ 
-                message: 'Oops -- No user with that ID' 
+                message: 'Oops -- No user with that ID 💀' 
               })
               : Thought.deleteMany({ _id: { $in: user.thoughts } })
           )
           .then(() => res.json({ 
-            message: 'User and any of their thoughts are deleted' 
+            message: 'User and any of their thoughts are deleted 🚮' 
           }))
           .catch((err) => {
             console.log(err);
@@ -67,7 +67,7 @@ module.exports = {
       )
         .then((user) =>
           !user
-            ? res.status(404).json({ message: 'Oops -- No user with that ID' })
+            ? res.status(404).json({ message: 'Oops -- No user with that ID 💀' })
             : res.json(user)
         )
         .catch((err) => {
@@ -86,7 +86,7 @@ module.exports = {
       )
       .then((user) =>
           !user
-          ? res.status(404).json({ message: 'Oops -- No user with this id!' })
+          ? res.status(404).json({ message: 'Oops -- No user with this id! 💀' })
           : res.json(user)
       )
       .catch((err) => {
@@ -104,7 +104,7 @@ module.exports = {
       )
       .then((user) =>
           !user
-          ? res.status(404).json({ message: 'Oops -- No user with this id!' })
+          ? res.status(404).json({ message: 'Oops -- No user with this id! 💀' })
           : res.json(user)
       )
       .catch((err) => {
