@@ -2,9 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue.svg)](https://opensource.org/licenses/MIT)
 
-[GitHub Repo](https://github.com/lonewolfco/API-for-the-gram)
-
-[Heroku Link](https://api-for-the-gram.herokuapp.com/api/users/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://api-for-the-gram.herokuapp.com/api/users/) 
 
 
 An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.  The app uses express.js for routing,  a MongoDB database, and the Mongoose ODM. 
