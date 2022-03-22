@@ -4,6 +4,9 @@
 
 [GitHub Repo](https://github.com/lonewolfco/API-for-the-gram)
 
+[Heroku Link](https://api-for-the-gram.herokuapp.com/api/users/)
+
+
 An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.  The app uses express.js for routing,  a MongoDB database, and the Mongoose ODM. 
 
 ## Table of Contents
@@ -11,6 +14,7 @@ An API for a social network web application where users can share their thoughts
 - [User Story](#userstory)
 - [Acceptance Criteria](#ac)
 - [Mock-up](#mockup)
+- [How to Use](#howtouse)
 - [Languages Used](#languages)
 - [License](#license)
 
@@ -51,27 +55,11 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ## [Mock-up](#mockup)
 
 The following video shows examples of the application's API routes being tested in Insomnia.
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f5d1f50b212484fb39f76ecbbc45031" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
+## [How to Use](#howtouse)
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/18-nosql-homework-demo-01.gif)
-
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
-
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/18-nosql-homework-demo-02.gif)
-
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
-
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/18-nosql-homework-demo-03.gif)
-
-In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
-
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
-
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
-
-In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
-
+Simply paste the following link into insomnia https://api-for-the-gram.herokuapp.com/ and be sure to add in the appropiate path to test a specific route. 
 
 ## [Languages Used](#languages)
 - Express.js for routing
@@ -80,26 +68,25 @@ In addition to this, your walkthrough video should show the POST and DELETE rout
 - Deployed via Heroku
 
 
-### Walkthrough Video: 37%
-
-* A walkthrough video that demonstrates the functionality of the social media API must be submitted, and a link to the video should be included in your README file.
-
-  * The walkthrough video must show all of the technical acceptance criteria being met.
-
-  * The walkthrough video must demonstrate how to start the application’s server.
-
-  * The walkthrough video must demonstrate GET routes for all users and all thoughts being tested in Insomnia.
-
-  * The walkthrough video must demonstrate GET routes for a single user and a single thought being tested in Insomnia.
-
-  * The walkthrough video must demonstrate POST, PUT, and DELETE routes for users and thoughts being tested in Insomnia.
-
-  * Walkthrough video must demonstrate POST and DELETE routes for a user’s friend list being tested in Insomnia.
-
-  * Walkthrough video must demonstrate POST and DELETE routes for reactions to thoughts being tested in Insomnia.
-
-
-
-
 ---
 © 2022 lonewolfco
+
+Copyright (c) 2022 lonewolfco (Lo Selby)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
