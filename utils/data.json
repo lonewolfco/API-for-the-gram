@@ -1,0 +1,47 @@
+{
+    "users": [
+        {
+            "username": "mesalito",
+            "email": "mesa@woof.com"
+        },
+        {
+            "username": "Bandito",
+            "email": "bandit@woof.com"
+        },
+        {
+            "username": "loselby",
+            "email": "loselby@woof.com"
+        }
+
+    ],
+    "thoughts": [
+        {
+            "thoughtText": "I hope we go for a walk on the beach today!",
+            "username": "mesalito",
+            "reactions": [
+                {
+                    "reactionText": "Can I come too?",
+                    "username": "Bandito"
+                }
+            ]
+        },
+        {
+            "thoughtText": "Bark Bark",
+            "username": "Bandito"
+        },
+        {
+            "thoughtText": "Beach Day?",
+            "username": "loselby",
+            "reactions": [
+                {
+                    "reactionText": "Awroo",
+                    "username": "mesalito"
+                },
+                {
+                    "reactionText": "Woof!",
+                    "username": "Bandito"
+                }
+            ]
+        }
+    ]   
+}
