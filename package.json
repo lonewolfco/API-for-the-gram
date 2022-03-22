@@ -1,6 +1,9 @@
 {
   "name": "api-for-the-gram",
   "version": "1.0.0",
+  "engines": {
+    "node": "17.x"
+  },
   "description": "An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app uses express.js for routing, a MongoDB database, and the Mongoose ODM.",
   "main": "index.js",
   "license": "MIT",

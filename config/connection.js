@@ -14,4 +14,18 @@ connect(connectionString,
   }
 );
 
+
+// const { MongoClient } = require('mongodb');
+
+
+// const uri = "mongodb+srv://lo-admin:4yck3ivqyWv6cst1@cluster0.isnvl.mongodb.net/gramDB?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, 
+//   { useNewUrlParser: true, useUnifiedTopology: true });
+
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
 module.exports = connection;
